@@ -55,7 +55,7 @@ inquirer
     {
       type: "input",
       name: "text",
-      message: "Enter the text for your logo:",
+      message: "Enter three letters of text for your logo:",
     },
   ])
   .then((answers) => {
@@ -75,8 +75,9 @@ inquirer
 
     // Generate the SVG string
     
-
+    const svg = shape.render().replace('SVT_TEXT', answers.text);
     // Write the SVG string to a file
     fs.writeFileSync("examples/logo.svg", svg);
+
   });
 

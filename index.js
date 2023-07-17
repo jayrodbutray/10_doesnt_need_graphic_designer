@@ -60,34 +60,38 @@ inquirer
     },
     {
       type: "input",
-      name: "text color",
+      name: "textColor",
       message: "What color would you like your text to be?",
     }
   ])
   .then((answers) => {
+    const {shape, color, text, textColor}= answers;
+
     // Create the appropriate shape based on the user's choice
-    let shape;
-    switch (answers.shape) {
+    let selectedShape;
+    switch (shape) {
       case "Triangle":
-        shape = new Triangle(answers.color);
+        selectedShape = new Triangle(color, text, textColor);
         break;
       case "Circle":
-        shape = new Circle(answers.color);
+        selectedShape = new Circle(color, text, textColor);
         break;
       case "Square":
-        shape = new Square(answers.color);
+        selectedShape = new Square(color, text, textColor);
         break;
     }
 
+    selectedShape.setColor(color,textColor);
+   
     // Generate the SVG string
     
-    const svg = shape.render().replace('SVT_TEXT', answers.textcolor);
+    const svgShape = selectedShape.render();
     // Write the SVG string to a file
-    fs.writeFileSync("examples/logo.svg", svg, (error) => {
+    fs.writeFileSync("examples/logo.svg", svgShape, (error) => {
       if(error){
-        console.log(`Error writing to ${svg}`, error);
+        console.log(`Error writing to examples/logo.svg`, error);
       } else {
-        console.log(`Generated logo.svg`);
+        console.log(`Generated examples/logo.svg`);
       }
     })
 

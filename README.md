@@ -6,4 +6,6 @@
 
 
 
-[Link to github repository](https://github.com/jayrodbutray/10_doesnt_need_graphic_designer).
+[Link to github repository](https://github.com/jayrodbutray/10_doesnt_need_graphic_designer)
+
+[Link to screencastify video demo](https://drive.google.com/file/d/1_KM9B0K-mRfriL-OlrmwCSC_6GKxJydt/view)

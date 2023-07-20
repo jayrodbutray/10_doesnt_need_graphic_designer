@@ -1,1 +1,1 @@
-<svg viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="green"></circle><text x="150" y="150" fill="purple" font-size="1.6rem" text-anchor="middle">JAB</text></svg>
+<svg viewBox="0 0 300 200"><polygon points="100,150 150,50 200,150" fill="red"></polygon><text x="150" y="150" fill="blue" font-size="1.6rem" text-anchor="middle">JAB</text></svg>
